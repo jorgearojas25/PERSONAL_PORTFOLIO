@@ -1,0 +1,42 @@
+@import '_colors.scss';
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $background_color;
+}
+
+.mainContainer{
+    display: absolute;
+    overflow: hidden;
+}
+
+header{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas: 
+        ". . ."
+        ". presentation ."
+        ". . .";
+    grid-template-rows: 15% 1fr 15%;
+    grid-template-columns: 15% 1fr 15%;
+    grid-gap: 5px;
+    background-color: $header_color;
+    .presentation{
+        grid-area: presentation;
+        background-color: $background_color;
+    }
+}
+
+section{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    background-color: $background_color
+}

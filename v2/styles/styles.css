@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #32213A;
+}
+
+.mainContainer {
+  display: absolute;
+  overflow: hidden;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+      grid-template-areas: ". . ." ". presentation ." ". . .";
+  -ms-grid-rows: 15% 1fr 15%;
+      grid-template-rows: 15% 1fr 15%;
+  -ms-grid-columns: 15% 1fr 15%;
+      grid-template-columns: 15% 1fr 15%;
+  grid-gap: 5px;
+  background-color: #383B53;
+}
+
+header .presentation {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: presentation;
+  background-color: #32213A;
+}
+
+section {
+  display: -ms-grid;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  background-color: #32213A;
+}
+/*# sourceMappingURL=styles.css.map */
