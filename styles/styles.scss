@@ -1,0 +1,86 @@
+@import '_colors.scss';
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $background_color;
+}
+
+li{
+    list-style-type: none;
+}
+
+header{
+    background-color: $header_color;
+    width: 90%;
+    transform: translate(0, 25%);
+    text-align: center;
+    h1{
+        width: 100%;
+        color: $fonts_color;
+        padding: 3vh;
+    }
+    p{
+        color: $efect_color;
+        padding: 3vh;
+    }
+}
+
+.container{
+    width: 100vw;
+}
+
+.groupL{  
+    margin: 4% 1% 2% 5%;
+     display: inline-block;
+     width: 45%;;
+     position: relative;
+     vertical-align: top;
+}
+
+.groupR{
+
+    margin: 4% 1% 2% 1%;
+     display: inline-block;
+     width: 45%;;
+     position: relative;
+}
+
+
+
+
+.tecnologies{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 3vh 0 3vh 0;
+    .card{
+        background-color: $cards_color;
+        display: inline-block;
+        width: 30%;
+        .cardTitle{
+            padding: 2vh;
+        }
+        .cardList{
+            padding: 2vh;
+        }
+    }
+}
+
+
+.proyect{
+    width: 100%;
+    background-color: $cards_color;
+    display: flex;
+    flex-direction: column;
+    article{
+        margin: 3vh 0 3vh 0;
+        padding: 0 3vh 0 3vh;
+    }
+}
