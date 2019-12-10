@@ -1,0 +1,9 @@
+%basicMobileGrid{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: 15% 1fr 15%;
+    grid-template-columns: 15% 1fr 15%;
+    grid-gap: 5px;
+}
+
