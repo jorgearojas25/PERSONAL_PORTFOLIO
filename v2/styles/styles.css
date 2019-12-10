@@ -1,17 +1,34 @@
-header, section {
+header {
   display: -ms-grid;
   display: grid;
   width: 100vw;
   height: 100vh;
-  -ms-grid-rows: 15% 1fr 15%;
-      grid-template-rows: 15% 1fr 15%;
-  -ms-grid-columns: 15% 1fr 15%;
-      grid-template-columns: 15% 1fr 15%;
+  -ms-grid-rows: 10% 1fr 10%;
+      grid-template-rows: 10% 1fr 10%;
+  -ms-grid-columns: 10% 1fr 10%;
+      grid-template-columns: 10% 1fr 10%;
+  grid-gap: 5px;
+}
+
+.tecnologies {
+  display: -ms-grid;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  padding: 5% 0 5% 0;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-columns: 5% 1fr 5%;
+      grid-template-columns: 5% 1fr 5%;
   grid-gap: 5px;
 }
 
 header {
       grid-template-areas: ". . ." ". element ." ". . .";
+}
+
+.tecnologies {
+      grid-template-areas: ". topGrid ." ". centerGrid ." ". bottomGrid .";
 }
 
 /* Coolors Exported Palette - coolors.co/423e37-6e675f-a39594-eb5e55-edebd7 */
@@ -22,6 +39,7 @@ header {
   font-family: 'Roboto', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -44,7 +62,66 @@ header .presentation {
   background-color: #6e675f;
 }
 
-section {
+header .presentation .presentationCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .presentation .presentationCard img {
+  -webkit-transform: translate(0, -25%);
+          transform: translate(0, -25%);
+  border: solid 5px;
+  border-color: #eb5e55;
+  display: hidden;
+  width: 70%;
+  border-radius: 50%;
+}
+
+header .presentation .presentationCard .title {
+  color: #edebd7;
+}
+
+header .presentation .presentationCard p {
+  color: #edebd7;
+  text-align: center;
+  padding: 5%;
+}
+
+header .presentation .presentationCard a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: #eb5e55;
+  padding: 3%;
+  background-color: #a39594;
+}
+
+header .presentation .presentationCard a:hover {
+  background-color: #423e37;
+  color: #edebd7;
+}
+
+.tecnologies {
   background-color: #6e675f;
+}
+
+.tecnologies .frontTec {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: topGrid;
+  background-color: #a39594;
 }
 /*# sourceMappingURL=styles.css.map */

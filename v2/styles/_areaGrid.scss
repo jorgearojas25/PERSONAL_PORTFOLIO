@@ -4,3 +4,10 @@
     ". element ."
     ". . .";
 }
+
+%areaCenterColumn{
+    grid-template-areas: 
+    ". topGrid ."
+    ". centerGrid ."
+    ". bottomGrid .";
+}
