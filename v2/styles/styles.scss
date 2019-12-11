@@ -2,6 +2,7 @@
 @import '_desktopGrid.scss';
 @import '_areaGrid.scss';
 @import '_palette.scss';
+@import '_flexConfig.scss';
 
 *{
     padding: 0;
@@ -22,30 +23,28 @@ body{
 }
 
 header{
-    @extend %basicMobileGrid;
-    @extend %areaCenterElement;
     background-color: $color1;
-    .presentation{
-        grid-area: element;
-        background-color: $color2;
+    .presentation{ 
+        @extend %basicFlexColumn;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
         .presentationCard{
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            align-content: center;
-            width: 100%;
-            height: 100%;
-            align-items: center;
+            @extend %basicFlexColumn;
+            width: 80%;
+            height: 80%;
+            background-color: $color2;
+            border-radius: 3%;
             img{
-                transform: translate(0,-25%);
                 border: solid 5px;
                 border-color: $color4;
-                display: hidden;
                 width: 70%;
                 border-radius: 50%;
+                transform: translate(0%, -25%);
             }
             .title{
                 color: $color5;
+                text-align: center;
             }
             p{
                 color: $color5;
@@ -56,7 +55,8 @@ header{
                 text-decoration: none;
                 font-weight: bolder;
                 color: $color4;
-                padding: 3%;
+                padding: 6%;
+                margin: 6%;
                 background-color: $color3;
                 &:hover{
                     background-color: $color1;
@@ -67,12 +67,46 @@ header{
     }
 }
 
-.tecnologies{
-    @extend %treeMobileGrid;
-    @extend %areaCenterColumn;
-    background-color: $color2;
-    .frontTec{
-        grid-area: topGrid;
-        background-color: $color3;
+section{
+    @extend %basicFlexColumn;
+    width: 100vw;
+    height: 100vh;
+    .tecnologies{ 
+        background-color: $color2;
+        @extend %basicFlexColumn;
+        justify-content: space-evenly;
+        .card{ 
+            background-color: $color3;
+            margin: 5%;
+            width: 100%;
+        }
+        .frontTec{
+            display: flex;
+            flex-direction: row-reverse;
+            background-color: $color3;
+        }
+        .backTec{
+            display: flex;
+            flex-direction: row;
+            background-color: $color2;
+        }
+        .personalTec{
+            display: flex;
+            flex-direction: row-reverse;
+            background-color: $color5;
+        }
+        a{
+            text-decoration: none;
+            font-weight: bolder;
+            color: $color4;
+            padding: 6%;
+            margin: 6%;
+            background-color: $color3;
+            &:hover{
+                background-color: $color1;
+                color: $color5;
+            }
+        }
     }
 }
+

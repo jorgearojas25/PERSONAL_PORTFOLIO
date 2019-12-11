@@ -1,38 +1,24 @@
-header {
-  display: -ms-grid;
-  display: grid;
-  width: 100vw;
-  height: 100vh;
-  -ms-grid-rows: 10% 1fr 10%;
-      grid-template-rows: 10% 1fr 10%;
-  -ms-grid-columns: 10% 1fr 10%;
-      grid-template-columns: 10% 1fr 10%;
-  grid-gap: 5px;
-}
-
-.tecnologies {
-  display: -ms-grid;
-  display: grid;
-  width: 100vw;
-  height: 100vh;
-  padding: 5% 0 5% 0;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-  -ms-grid-columns: 5% 1fr 5%;
-      grid-template-columns: 5% 1fr 5%;
-  grid-gap: 5px;
-}
-
-header {
-      grid-template-areas: ". . ." ". element ." ". . .";
-}
-
-.tecnologies {
-      grid-template-areas: ". topGrid ." ". centerGrid ." ". bottomGrid .";
-}
-
 /* Coolors Exported Palette - coolors.co/423e37-6e675f-a39594-eb5e55-edebd7 */
 /* RGB */
+header .presentation, header .presentation .presentationCard, section, section .tecnologies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -56,43 +42,32 @@ header {
 }
 
 header .presentation {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: element;
-  background-color: #6e675f;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 header .presentation .presentationCard {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  width: 100%;
-  height: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 80%;
+  height: 80%;
+  background-color: #6e675f;
+  border-radius: 3%;
 }
 
 header .presentation .presentationCard img {
-  -webkit-transform: translate(0, -25%);
-          transform: translate(0, -25%);
   border: solid 5px;
   border-color: #eb5e55;
-  display: hidden;
   width: 70%;
   border-radius: 50%;
+  -webkit-transform: translate(0%, -25%);
+          transform: translate(0%, -25%);
 }
 
 header .presentation .presentationCard .title {
   color: #edebd7;
+  text-align: center;
 }
 
 header .presentation .presentationCard p {
@@ -105,7 +80,8 @@ header .presentation .presentationCard a {
   text-decoration: none;
   font-weight: bolder;
   color: #eb5e55;
-  padding: 3%;
+  padding: 6%;
+  margin: 6%;
   background-color: #a39594;
 }
 
@@ -114,14 +90,68 @@ header .presentation .presentationCard a:hover {
   color: #edebd7;
 }
 
-.tecnologies {
+section {
+  width: 100vw;
+  height: 100vh;
+}
+
+section .tecnologies {
+  background-color: #6e675f;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+section .tecnologies .card {
+  background-color: #a39594;
+  margin: 5%;
+  width: 100%;
+}
+
+section .tecnologies .frontTec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  background-color: #a39594;
+}
+
+section .tecnologies .backTec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   background-color: #6e675f;
 }
 
-.tecnologies .frontTec {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: topGrid;
+section .tecnologies .personalTec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  background-color: #edebd7;
+}
+
+section .tecnologies a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: #eb5e55;
+  padding: 6%;
+  margin: 6%;
   background-color: #a39594;
+}
+
+section .tecnologies a:hover {
+  background-color: #423e37;
+  color: #edebd7;
 }
 /*# sourceMappingURL=styles.css.map */

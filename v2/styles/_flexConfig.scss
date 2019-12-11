@@ -1,0 +1,10 @@
+// Define un contenedor flexible en columna con sus elementos centrados
+%basicFlexColumn {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
