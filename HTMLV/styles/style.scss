@@ -1,0 +1,10 @@
+@import "_palette.scss";
+
+body {
+  background: rgb(71, 22, 125);
+  background: linear-gradient(
+    90deg,
+    $color1 0%,
+    $color2 100%
+  );
+}
