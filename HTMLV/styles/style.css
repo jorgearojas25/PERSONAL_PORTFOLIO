@@ -3,7 +3,11 @@
 /* RGB */
 body {
   background: #47167d;
-  background: -webkit-gradient(linear, left top, right top, from(#48167e), to(#ff5757));
-  background: linear-gradient(90deg, #48167e 0%, #ff5757 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#48167e), to(#ff5757));
+  background: linear-gradient(180deg, #48167e 0%, #ff5757 100%);
+}
+
+section {
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */
